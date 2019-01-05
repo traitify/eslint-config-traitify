@@ -1,0 +1,36 @@
+{
+  "name": "eslint-config-traitify",
+  "version": "0.0.0",
+  "description": "Traitify's base ESLint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/traitify/eslint-config-traitify.git"
+  },
+  "keywords": [
+    "config",
+    "eslint",
+    "eslintconfig",
+    "javascript",
+    "styleguide",
+    "traitify"
+  ],
+  "author": "Tom Prats <tom@tomify.me> (https://www.tomify.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/traitify/eslint-config-traitify/issues"
+  },
+  "homepage": "https://github.com/traitify/eslint-config-traitify#readme",
+  "dependencies": {
+    "babel-eslint": "10.x",
+    "eslint-config-airbnb": "17.x",
+    "eslint-import-resolver-webpack": "0.x"
+  },
+  "peerDependencies": {
+    "eslint": "5.x",
+    "eslint-plugin-babel": "5.x"
+  }
+}
