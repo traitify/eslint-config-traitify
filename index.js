@@ -27,7 +27,7 @@ module.exports = {
       overrides: {
         as: {before: true, after: true},
         case: {before: true, after: true},
-        catch: {before: true},
+        catch: {before: true, after: false},
         const: {before: true, after: true},
         default: {before: true, after: true},
         else: {before: true, after: true},
