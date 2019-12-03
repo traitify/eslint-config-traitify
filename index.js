@@ -65,11 +65,11 @@ module.exports = {
     "react/jsx-boolean-value": ["error", "always"], // Prefer explicit
     "react/jsx-filename-extension": "off", // Unnecessary
     "react/jsx-one-expression-per-line": "off", // Creates unnecessary white space issues
+    "react/jsx-props-no-spreading": "off", // Unnecessary
     "react/no-did-update-set-state": "off", // Makes hacks needed for prop change triggers
-    "react/no-unused-state": "off", // TODO: Remove when rule is fixed for setState function
     "react/prefer-stateless-function": "off", // Prefer React
     "react/react-in-jsx-scope": "off", // Global React
-    "react/sort-comp": "off", // TODO: Remove when airbnb includes componentDidCatch
+    "react/static-property-placement": ["error", "static public field"], // Airbnb will catch up
     "space-before-function-paren": ["error", "never"] // Whitespace - Preference
   },
   settings: {

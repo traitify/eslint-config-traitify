@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-traitify",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Traitify's base ESLint config",
   "main": "index.js",
   "scripts": {
@@ -25,12 +25,12 @@
   },
   "homepage": "https://github.com/traitify/eslint-config-traitify#readme",
   "dependencies": {
-    "babel-eslint": "10.x",
-    "eslint-config-airbnb": "17.x",
+    "babel-eslint": "10.x || 11.x",
+    "eslint-config-airbnb": "17.x || 18.x",
     "eslint-import-resolver-webpack": "0.x"
   },
   "peerDependencies": {
-    "eslint": "5.x",
+    "eslint": "5.x || 6.x",
     "eslint-plugin-babel": "5.x"
   }
 }
