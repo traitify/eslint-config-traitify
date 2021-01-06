@@ -5,11 +5,11 @@ module.exports = {
     node: false
   },
   extends: ["airbnb"],
-  parser: "babel-eslint",
-  plugins: ["babel"],
+  parser: "@babel/eslint-parser",
+  plugins: ["@babel"],
   rules: {
+    "@babel/object-curly-spacing": "error", // Replace non-babel version
     "arrow-parens": ["error", "always"], // Consistency
-    "babel/object-curly-spacing": "error", // Replace non-babel version
     "class-methods-use-this": "off", // Allows methods to be overridden
     "comma-dangle": ["error", "never"], // Unnecessary
     "consistent-return": "off", // Makes it hard to return early for conditionals
@@ -22,8 +22,8 @@ module.exports = {
       allowChildren: false,
     }], // Unnecessary to have nesting for both
     "keyword-spacing": ["error", {
-      before: false,
       after: false,
+      before: false,
       overrides: {
         as: {before: true, after: true},
         case: {before: true, after: true},
