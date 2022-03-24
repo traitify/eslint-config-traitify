@@ -42,7 +42,9 @@ module.exports = {
     }], // Whitespace - Preference
     "lines-between-class-members": ["error", "never"],
     "no-else-return": "off", // Allows more functional styles
+    "no-lonely-if": "off", // Allows more readable conditions
     "no-multiple-empty-lines": ["error", {max: 1, maxBOF: 0, maxEOF: 0}], // Little stricter
+    "no-promise-executor-return": "off", // Makes it hard to return early for conditions
     "no-underscore-dangle": "off", // Doesn't allow `const key = _key.toLowerCase()`
     "no-unused-expressions": ["error", {allowShortCircuit: true, allowTernary: true}],
     "object-curly-newline": ["error", {multiline: true, consistent: true}],
@@ -62,6 +64,10 @@ module.exports = {
     "quote-props": ["error", "consistent-as-needed", {keywords: false}],
     "quotes": ["error", "double", {allowTemplateLiterals: true}],
     "react/destructuring-assignment": "off", // Overactive and solved by prefer-destructuring
+    "react/function-component-definition": ["error", {
+      namedComponents: ["function-declaration", "function-expression"],
+      unnamedComponents: "arrow-function"
+    }], // Allows simple arrow components
     "react/jsx-boolean-value": ["error", "always"], // Prefer explicit
     "react/jsx-filename-extension": "off", // Unnecessary
     "react/jsx-one-expression-per-line": "off", // Creates unnecessary white space issues
