@@ -9,11 +9,11 @@
     "eslint-import-resolver-webpack": "0.x"
   },
   "description": "Traitify's base ESLint config",
-  "files": [
-    "index.js",
-    "package.json",
-    "README.md"
-  ],
+  "exports": {
+    ".": "./index.js",
+    "./jest": "./jest.js",
+    "./package.json": "./package.json"
+  },
   "homepage": "https://github.com/traitify/eslint-config-traitify#readme",
   "keywords": [
     "config",
@@ -28,7 +28,13 @@
   "name": "eslint-config-traitify",
   "peerDependencies": {
     "@babel/eslint-plugin": "7.x",
-    "eslint": "8.x"
+    "eslint": "8.x",
+    "eslint-import-resolver-jest": ">=3",
+    "eslint-plugin-jest": ">=27"
+  },
+  "peerDependenciesMeta": {
+    "eslint-import-resolver-jest": {"optional": true},
+    "eslint-plugin-jest": {"optional": true}
   },
   "repository": {
     "type": "git",
@@ -37,5 +43,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.3.0"
+  "version": "0.4.0"
 }
