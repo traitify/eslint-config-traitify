@@ -9,11 +9,11 @@
     "eslint-import-resolver-webpack": "0.x"
   },
   "description": "Traitify's base ESLint config",
-  "files": [
-    "index.js",
-    "package.json",
-    "README.md"
-  ],
+  "exports": {
+    ".": "./index.js",
+    "./jest": "./jest.js",
+    "./package.json": "./package.json"
+  },
   "homepage": "https://github.com/traitify/eslint-config-traitify#readme",
   "keywords": [
     "config",
@@ -37,5 +37,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.3.0"
+  "version": "0.4.0-alpha.0"
 }
