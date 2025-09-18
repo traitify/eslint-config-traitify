@@ -5,14 +5,15 @@
   },
   "dependencies": {
     "@babel/eslint-parser": "7.x",
-    "eslint-config-airbnb": "19.x",
+    "confusing-browser-globals": "^1.0.11",
     "eslint-import-resolver-webpack": "0.x"
   },
   "description": "Traitify's base ESLint config",
   "exports": {
-    ".": "./index.js",
-    "./jest": "./jest.js",
-    "./package.json": "./package.json"
+    ".": "./config/base.js",
+    "./jest": "./config/jest.js",
+    "./package.json": "./package.json",
+    "./react": "./config/react.js"
   },
   "homepage": "https://github.com/traitify/eslint-config-traitify#readme",
   "keywords": [
@@ -30,18 +31,26 @@
     "@babel/eslint-plugin": "7.x",
     "eslint": "8.x",
     "eslint-import-resolver-jest": ">=3",
-    "eslint-plugin-jest": ">=27"
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-jest": ">=27",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react-hooks": "^5.1.0"
   },
   "peerDependenciesMeta": {
+    "@babel/eslint-plugin": {"optional": true},
     "eslint-import-resolver-jest": {"optional": true},
-    "eslint-plugin-jest": {"optional": true}
+    "eslint-plugin-jest": {"optional": true},
+    "eslint-plugin-jsx-a11y": {"optional": true},
+    "eslint-plugin-react": {"optional": true},
+    "eslint-plugin-react-hooks": {"optional": true}
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/traitify/eslint-config-traitify.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ."
   },
-  "version": "0.4.0"
+  "version": "1.0.0-alpha.0"
 }

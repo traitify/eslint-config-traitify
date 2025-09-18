@@ -5,10 +5,11 @@ module.exports = {
     node: false
   },
   extends: [
-    "airbnb"
-  ].concat([
-    "./rules/default"
-  ].map(require.resolve)),
+    "../airbnb/config/react",
+    "../airbnb/config/hooks",
+    "../rules/base",
+    "../rules/react"
+  ].map(require.resolve),
   parser: "@babel/eslint-parser",
   plugins: ["@babel"],
   rules: {},

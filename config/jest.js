@@ -5,11 +5,11 @@ module.exports = {
     node: true
   },
   extends: [
-    "airbnb",
     "plugin:jest/recommended"
   ].concat([
-    "./rules/default",
-    "./rules/jest"
+    "../airbnb/config/base",
+    "../rules/base",
+    "../rules/jest"
   ].map(require.resolve)),
   overrides: [
     {
@@ -23,7 +23,6 @@ module.exports = {
   plugins: ["@babel"],
   rules: {},
   settings: {
-    "import/resolver": "webpack",
-    react: {version: "detect"}
+    "import/resolver": "webpack"
   }
 };
