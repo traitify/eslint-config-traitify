@@ -4,9 +4,7 @@
     "url": "https://github.com/traitify/eslint-config-traitify/issues"
   },
   "dependencies": {
-    "@babel/eslint-parser": "7.x",
-    "confusing-browser-globals": "^1.0.11",
-    "eslint-import-resolver-webpack": "0.x"
+    "confusing-browser-globals": "^1.0.11"
   },
   "description": "Traitify's base ESLint config",
   "exports": {
@@ -28,6 +26,7 @@
   "main": "index.js",
   "name": "eslint-config-traitify",
   "peerDependencies": {
+    "@babel/eslint-parser": "7.x",
     "@babel/eslint-plugin": "7.x",
     "eslint": "8.x",
     "eslint-import-resolver-jest": ">=3",
@@ -38,8 +37,10 @@
     "eslint-plugin-react-hooks": "^5.1.0"
   },
   "peerDependenciesMeta": {
+    "@babel/eslint-parser": {"optional": true},
     "@babel/eslint-plugin": {"optional": true},
     "eslint-import-resolver-jest": {"optional": true},
+    "eslint-import-resolver-webpack": {"optional": true},
     "eslint-plugin-jest": {"optional": true},
     "eslint-plugin-jsx-a11y": {"optional": true},
     "eslint-plugin-react": {"optional": true},

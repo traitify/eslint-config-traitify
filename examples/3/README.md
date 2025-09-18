@@ -1,0 +1,4 @@
+- babel
+- jest
+- react
+- webpack

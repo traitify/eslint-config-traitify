@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "webpack": "^5.101.3"
+  },
+  "description": "Example with babel, jest, react, and webpack",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.24.7",
+    "@babel/eslint-plugin": "7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "eslint-config-traitify": "file:../..",
+    "eslint-import-resolver-webpack": "^0.13.10",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint": "8.x",
+    "eslint-import-resolver-jest": ">=3",
+    "eslint-plugin-jest": ">=27",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "react-test-renderer": "^18.3.1"
+  },
+  "name": "eslint-config-traitify",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest --config test/jest.config.js"
+  },
+  "version": "0.0.0"
+}

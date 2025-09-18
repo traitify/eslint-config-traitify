@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "webpack": "^5.101.3"
+  },
+  "description": "Example with babel, react, and webpack",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.24.7",
+    "@babel/eslint-plugin": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "eslint-config-traitify": "file:../..",
+    "eslint-import-resolver-webpack": "^0.13.10",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint": "8.x"
+  },
+  "name": "eslint-config-traitify",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "version": "0.0.0"
+}
