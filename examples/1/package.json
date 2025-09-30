@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "webpack": "^5.101.3"
-  },
   "description": "Example with babel and webpack",
   "devDependencies": {
     "@babel/eslint-parser": "^7.28.4",
@@ -9,7 +6,8 @@
     "@babel/preset-env": "^7.24.7",
     "eslint": "9.x",
     "eslint-config-traitify": "file:../..",
-    "eslint-import-resolver-webpack": "^0.13.10"
+    "eslint-import-resolver-webpack": "^0.13.10",
+    "webpack": "^5.101.3"
   },
   "name": "eslint-config-traitify-example-1",
   "scripts": {

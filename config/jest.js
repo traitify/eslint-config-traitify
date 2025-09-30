@@ -13,7 +13,7 @@ export default defineConfig([
   {
     ...pluginJest.configs["flat/recommended"],
     extends: [
-      ...pluginJest.configs["flat/recommended"].extends,
+      ...(pluginJest.configs["flat/recommended"].extends || []),
       rulesJest
     ],
     files: ["**/*.spec.js", "**/*.test.js"]

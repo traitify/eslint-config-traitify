@@ -1,8 +1,8 @@
-const path = require("path");
+import path from "path";
 
-module.exports = () => {
+export default () => {
   const config = {
-    context: path.resolve(__dirname),
+    context: path.resolve(),
     devtool: "source-map",
     entry: ["./index.js"],
     externals: {
@@ -35,8 +35,8 @@ module.exports = () => {
     resolve: {
       extensions: [".jsx", ".js"],
       modules: [
-        path.resolve(__dirname, "src"),
-        path.resolve(__dirname, "node_modules")
+        path.resolve("src"),
+        path.resolve("node_modules")
       ]
     }
   };
