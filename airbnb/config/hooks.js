@@ -1,6 +1,8 @@
-module.exports = {
+import {defineConfig} from "eslint/config";
+import rulesReactHooks from "../rules/react/hooks.js";
+
+export default defineConfig([{
   extends: [
-    '../rules/react/hooks.js',
-  ].map(require.resolve),
-  rules: {}
-};
+    rulesReactHooks
+  ]
+}]);

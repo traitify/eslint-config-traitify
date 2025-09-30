@@ -1,28 +1,21 @@
-module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    node: true
-  },
-  extends: [
-    "plugin:jest/recommended"
-  ].concat([
-    "../airbnb/config/base",
-    "../rules/base",
-    "../rules/jest"
-  ].map(require.resolve)),
-  overrides: [
-    {
-      files: "*.config.js",
-      rules: {
-        "global-require": "off"
-      }
+import {defineConfig} from "eslint/config";
+import pluginJest from "eslint-plugin-jest";
+import configBase from "./base.js";
+import rulesJest from "../rules/jest.js";
+
+export default defineConfig([
+  {
+    extends: [configBase],
+    languageOptions: {
+      globals: pluginJest.environments.globals.globals
     }
-  ],
-  parser: "@babel/eslint-parser",
-  plugins: ["@babel"],
-  rules: {},
-  settings: {
-    "import/resolver": "webpack"
+  },
+  {
+    ...pluginJest.configs["flat/recommended"],
+    extends: [
+      ...pluginJest.configs["flat/recommended"].extends,
+      rulesJest
+    ],
+    files: ["**/*.spec.js", "**/*.test.js"]
   }
-};
+]);

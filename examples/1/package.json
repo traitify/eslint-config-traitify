@@ -4,16 +4,17 @@
   },
   "description": "Example with babel and webpack",
   "devDependencies": {
-    "@babel/eslint-parser": "^7.24.7",
+    "@babel/eslint-parser": "^7.28.4",
     "@babel/eslint-plugin": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
+    "eslint": "9.x",
     "eslint-config-traitify": "file:../..",
-    "eslint-import-resolver-webpack": "^0.13.10",
-    "eslint": "8.x"
+    "eslint-import-resolver-webpack": "^0.13.10"
   },
-  "name": "eslint-config-traitify",
+  "name": "eslint-config-traitify-example-1",
   "scripts": {
     "lint": "eslint ."
   },
+  "type": "module",
   "version": "0.0.0"
 }

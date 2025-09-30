@@ -1,17 +1,26 @@
-module.exports = {
+import {defineConfig} from "eslint/config";
+import rulesBaseBestPractices from "../rules/base/best-practices.js";
+import rulesBaseErrors from "../rules/base/errors.js";
+import rulesBaseNode from "../rules/base/node.js";
+import rulesBaseStyle from "../rules/base/style.js";
+import rulesBaseVariables from "../rules/base/variables.js";
+import rulesBaseEs6 from "../rules/base/es6.js";
+import rulesBaseImports from "../rules/base/imports.js";
+import rulesBaseStrict from "../rules/base/strict.js";
+
+export default defineConfig([{
   extends: [
-    '../rules/base/best-practices',
-    '../rules/base/errors',
-    '../rules/base/node',
-    '../rules/base/style',
-    '../rules/base/variables',
-    '../rules/base/es6',
-    '../rules/base/imports',
-    '../rules/base/strict',
-  ].map(require.resolve),
-  parserOptions: {
+    rulesBaseBestPractices,
+    rulesBaseErrors,
+    rulesBaseNode,
+    rulesBaseStyle,
+    rulesBaseVariables,
+    rulesBaseEs6,
+    rulesBaseImports,
+    rulesBaseStrict
+  ],
+  languageOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  rules: {},
-};
+    sourceType: "module"
+  }
+}]);

@@ -1,20 +1,21 @@
-module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    node: false
-  },
+import {defineConfig} from "eslint/config";
+import globals from "globals";
+import configBase from "./base.js";
+import airbnbConfigReact from "../airbnb/config/react.js";
+import airbnbConfigHooks from "../airbnb/config/hooks.js";
+import rulesReact from "../rules/react.js";
+
+export default defineConfig([{
   extends: [
-    "../airbnb/config/react",
-    "../airbnb/config/hooks",
-    "../rules/base",
-    "../rules/react"
-  ].map(require.resolve),
-  parser: "@babel/eslint-parser",
-  plugins: ["@babel"],
-  rules: {},
+    airbnbConfigReact,
+    airbnbConfigHooks,
+    configBase,
+    rulesReact
+  ],
+  languageOptions: {
+    globals: {...globals.browser}
+  },
   settings: {
-    "import/resolver": "webpack",
     react: {version: "detect"}
   }
-};
+}]);

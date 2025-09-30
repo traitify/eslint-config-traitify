@@ -1,6 +1,7 @@
-module.exports = {
+import {defineConfig} from "eslint/config";
+
+export default defineConfig([{
   rules: {
-    "@babel/object-curly-spacing": "error", // Replace non-babel version
     "arrow-parens": ["error", "always"], // Consistency
     "class-methods-use-this": "off", // Allows methods to be overridden
     "comma-dangle": ["error", "never"], // Unnecessary
@@ -33,21 +34,21 @@ module.exports = {
     "no-underscore-dangle": "off", // Doesn't allow `const key = _key.toLowerCase()`
     "no-unused-expressions": ["error", {allowShortCircuit: true, allowTernary: true}],
     "object-curly-newline": ["error", {multiline: true, consistent: true}],
-    "object-curly-spacing": "off", // Incompatible with babel/object-curly-spacing
+    "object-curly-spacing": ["error", "never"],
     "prefer-destructuring": ["error", {
       VariableDeclarator: {
         array: false,
-        object: true,
+        object: true
       },
       AssignmentExpression: {
         array: false,
-        object: false,
-      },
+        object: false
+      }
     }, {
-      enforceForRenamedProperties: false,
+      enforceForRenamedProperties: false
     }], // Assignment expression looks funky with parens
     "quote-props": ["error", "consistent-as-needed", {keywords: false}],
     "quotes": ["error", "double", {allowTemplateLiterals: true}],
     "space-before-function-paren": ["error", "never"] // Whitespace - Preference
   }
-};
+}]);
