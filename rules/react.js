@@ -10,6 +10,7 @@ export default defineConfig([{
       allowChildren: false
     }], // Unnecessary to have nesting for both
     "react/destructuring-assignment": "off", // Overactive and solved by prefer-destructuring
+    "react-hooks/exhaustive-deps": "off", // Overactive
     "react/function-component-definition": ["error", {
       namedComponents: ["function-declaration", "function-expression"],
       unnamedComponents: "arrow-function"

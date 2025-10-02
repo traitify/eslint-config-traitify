@@ -41,15 +41,15 @@
   "main": "index.js",
   "name": "eslint-config-traitify",
   "peerDependencies": {
-    "@babel/eslint-parser": "7.x",
-    "@babel/eslint-plugin": "7.x",
-    "eslint": "9.x",
+    "@babel/eslint-parser": ">=7",
+    "@babel/eslint-plugin": ">=7",
+    "eslint": ">=9",
     "eslint-import-resolver-jest": ">=3",
-    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-import": ">=2",
     "eslint-plugin-jest": ">=27",
-    "eslint-plugin-jsx-a11y": "^6.10.0",
-    "eslint-plugin-react": "^7.36.1",
-    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-jsx-a11y": ">=6",
+    "eslint-plugin-react": ">=7",
+    "eslint-plugin-react-hooks": ">=5",
     "globals": ">=16"
   },
   "peerDependenciesMeta": {
@@ -86,5 +86,5 @@
     "lint": "eslint ."
   },
   "type": "module",
-  "version": "1.0.0-alpha.1"
+  "version": "1.0.0-alpha.2"
 }
